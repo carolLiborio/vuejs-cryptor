@@ -2,6 +2,8 @@
 
 Projeto para teste do framework Vuejs, utilizando-o via cdn. 
 
+Disponível em https://carolliborio.github.io/vuejs-cryptor/
+
 
 ## Para usar
 
