@@ -10,17 +10,17 @@ const aplicacao = new Vue({
   methods: {
     criptografar: function (event) {
       event.preventDefault();
-       
+
       if (this.txtParaCripto.length > 0) {
         //caso tenha texto para criptografar
-        this.resultadoTitulo = 'Texto criptografado';
+        this.resultadoTitulo = "Texto criptografado";
         //btoa método p/ criptografar em base64
-        this.resultadoTexto = btoa(this.txtParaCripto); 
+        this.resultadoTexto = btoa(this.txtParaCripto);
         this.msgErro = "";
       } else {
-        this.resultadoTitulo = '';
-        this.resultadoTexto = ''; 
-        this.msgErro = " Digite um texto para criptografar"; 
+        this.resultadoTitulo = "";
+        this.resultadoTexto = "";
+        this.msgErro = " Digite um texto para criptografar";
       }
     },
     verificaBase64: function (texto) {
@@ -35,17 +35,18 @@ const aplicacao = new Vue({
 
       if (verificaBase64 && this.txtParaDescripto.length > 0) {
         //caso tenha texto para criptografar
-        this.resultadoTitulo = 'Texto descriptografado';
+        this.resultadoTitulo = "Texto descriptografado";
         //atob método p/ descriptografar em base64
-        this.resultadoTexto = atob(this.txtParaDescripto); 
+        this.resultadoTexto = atob(this.txtParaDescripto);
         this.msgErro = "";
       } else {
-        this.resultadoTitulo = '';
-        this.resultadoTexto = ''; 
-        this.msgErro = "Este não é um formato válido"; 
+        this.resultadoTitulo = "";
+        this.resultadoTexto = "";
+        this.msgErro = "Este não é um formato válido";
       }
-
-
+    },
+    limpar: function () {
+      return (this.txtParaCripto = "", this.txtParaDescripto = "", this.resultadoTexto = "", this.resultadoTitulo ="");
     },
   },
 });

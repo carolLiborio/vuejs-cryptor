@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decodificador Vue.js</title>
+    <title>Encriptador Vue.js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
@@ -47,13 +47,14 @@
             <input type="submit" value="Descriptografar" />
           </form>
         </div>
+       <button  class="clear" v-on:click="limpar">limpar tudo</button>
       </section>
       <section class="box-message" v-if="resultadoTexto.length > 0">
-          <h4 class="subtitle"> {{ resultadoTitulo}}</h4>
-          <h3>  {{ resultadoTexto}} </h3>
+        <h4 class="subtitle">{{ resultadoTitulo}}</h4>
+        <h3>{{ resultadoTexto}}</h3>
       </section>
-      <section class="box-message"  v-if="msgErro.length > 0">
-        <h3 class="title-err"> {{ msgErro}}</h3>
+      <section class="box-message" v-if="msgErro.length > 0">
+        <h3 class="title-err">{{ msgErro}}</h3>
       </section>
     </main>
     <script src="script.js"></script>
