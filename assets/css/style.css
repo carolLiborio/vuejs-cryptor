@@ -120,7 +120,7 @@ button.clear {
     display: flex;
     flex-direction: column;
     margin: 0 auto 10px;
-    padding: 15px 0;
+    padding: 15px 38% 15px 40%;
     width: 100%;
 }
 
@@ -133,6 +133,10 @@ button.clear {
     .form-box form{
         max-width: none;
 
+    }
+
+    button.clear {
+        padding: 15px 30% 15px 35%;
     }
 }
 
